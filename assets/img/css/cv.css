@@ -18,6 +18,17 @@
     border-radius: 4%;
 }
 
+.annee {
+    font-family: sans-serif; 
+    font-size: 18px;
+    color: black;
+    margin-right: 30px;
+    border: 10px;
+    padding: 3px;
+    text-align: left;
+    font-weight: bold;
+}
+
 h1 {
     font-size: 14px;
     color: black;
@@ -64,5 +75,9 @@ li {
 }
 
 h3 {
-    display: inline
+    display: inline;
+    margin-right: 30px;
+    border: 10px;
+    padding: 3px;
+    text-align: left;
 }
