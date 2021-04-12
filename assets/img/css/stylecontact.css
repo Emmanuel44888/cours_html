@@ -1,0 +1,31 @@
+header, nav, aside, section, footer, article {
+    display: block;
+}
+
+header {
+    background-color: red;
+}
+
+nav {
+    background-color: blue;
+    float: left;
+    width: 20%;
+    height: 350px;
+}
+
+article {
+    background-color: yellow;
+    width: 80%;
+}
+
+aside {
+    float: right;
+    width: 20%;
+    background-color: chartreuse;
+    height: 350px;
+}
+
+footer {
+    clear: both;
+    background-color: firebrick;
+}

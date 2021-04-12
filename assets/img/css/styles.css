@@ -1,0 +1,48 @@
+/* le selecteur universel etoile s'adresse a tous les eléments*/
+*{
+    font-family: verdana;
+}
+
+/* Creation d'une  classe CSS avec le selecteur . */
+.info {
+    background-color: blue
+}
+
+.premier {
+    font-size: 30px;
+}
+
+h2 {font-family: verdana,sans-serif; 
+    font-size:18px;
+}
+/* Selecteur descendant */
+/* Ici on cible tous les enfants li de la balise ul */
+ul>li 
+   {
+    color: blue; 
+    background: #FF4040;
+    margin: 14px 14px 14px 14px;
+    list-style: square;
+}
+
+ #font {font-family: serif;}
+
+p.rouge {
+    color: red;
+}
+div.code {
+    font-family: Courier New ;
+}
+
+div.exemple {
+    font-family: Courier New ;
+}
+
+ol>li {
+    background-color: yellow;
+}
+
+
+
+
+

@@ -1,0 +1,68 @@
+
+
+.entete {
+    background: rgb(210, 220, 230);
+    text-align: center;
+    padding-right: 20px;
+    margin: 50px;
+    box-shadow: 10px 10px 2px rgb(105, 105, 105);
+    border-radius: 4%; 
+} 
+
+.conteneur {
+    background: rgb(210, 220, 230);
+    text-align: center;
+    padding-right: 20px;
+    margin: 50px;
+    box-shadow: 10px 10px 2px rgb(105, 105, 105);
+    border-radius: 4%;
+}
+
+h1 {
+    font-size: 14px;
+    color: black;
+    font: bold;
+}
+
+h2 {
+    background-color: rgb(181, 181, 240);
+    font-size: 14px;
+    color: white;
+    margin-right: 30px;
+    border: 0px;
+    padding: 0px;
+    border-width:0px;
+    text-align: start;     
+}
+
+div.conteneur {
+    font-size: 14px;
+    color: black;
+    margin-right: 30px;
+    margin-left: 40px;
+    padding: 10px;
+    border: 10px;
+    text-align: start;
+    font-weight: bold;
+}
+
+div.adresse {
+    background: rgb(210, 220, 230);
+    text-align: right;
+    padding-right: 10px;
+    margin-left: 4px;
+}
+
+li {
+    font-size: 12px;
+    color: black;
+    margin-right: 30px;
+    border: 10px;
+    padding: 3px;
+    text-align: left;
+    line-height: 12px;
+}
+
+h3 {
+    display: inline
+}
