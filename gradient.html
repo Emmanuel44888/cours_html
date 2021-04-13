@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset=UTF-8" />
+    <title>Gradient radial</title>
+</head>
+
+<body>
+    <p class="gradient-horizontal">Gradient horizontal du rouge au bleu</p>
+    <hr>
+    <p class="gradient-vertical">Gradient vertical du rouge au bleu</p>
+    <hr>
+    <p class="gradient-diagonal">Gradient diagonal du rouge au bleu</p>
+    <hr>
+    <p class="gradient-horizontal-multiple">
+        <font size=6>Gradient
+            horizontal multiple, du rouge au blanc, couleurs intermédiaires bleu et
+            jaune</font>
+    </p>
+    <hr>
+    <p class="gradient-radial">Gradient radial</p>
+    <hr>
+    <p class="gradient-radial-bis">Gradient radial</p>
+    <hr>
+    <div class="alpha00">Texte a affiché sur un fond vert d'opacité(alpha) à 0%</div>
+    <div class="alpha20">Texte a affiché sur un fond vert d'opacité(alpha) à 20%</div>
+    <div class="alpha50">Texte a affiché sur un fond vert d'opacité(alpha) à 50%</div>
+    <div class="alpha80">Texte a affiché sur un fond vert d'opacité(alpha) à 80%</div>
+</body>
+
+<style>
+    .gradient-horizontal {
+        width: 400px;
+        height: 200px;
+        background: -ms-linear-gradient(left, red, blue);
+        background: -moz-linear-gradient(left, red, blue);
+        background: -webkit-linear-gradient(left, red, blue);
+    }
+
+    .gradient-vertical {
+        width: 400px;
+        height: 200px;
+        background: -ms-linear-gradient(top, red, blue);
+        background: -moz-linear-gradient(top, red, blue);
+        background: -webkit-linear-gradient(top, red, blue);
+    }
+
+    .gradient-diagonal {
+        width: 400px;
+        height: 200px;
+        background: -moz-linear-gradient(top left, red, blue);
+        background: -ms-linear-gradient(top left, red, blue);
+        background: -webkit-linear-gradient(top left, red, blue);
+    }
+
+    .gradient-horizontal-multiple {
+        width: 400px;
+        height: 200px;
+        background: -moz-linear-gradient(left, red 0%, blue 33%, yellow 66%, white);
+        background: -ms-linear-gradient(left, red 0%, blue 33%, yellow 66%, white);
+        background: -webkit-linear-gradient(left, red 0%, blue 33%, yellow 66%, white);
+    }
+
+    .gradient-radial {
+        width: 400px;
+        height: 200px;
+        background: -webkit-radial-gradient(50% 50%, circle closest-side, red, blue);
+        background: -ms-radial-gradient(50% 50%, circle closest-side, red, blue);
+        background: -moz-radial-gradient(50% 50%, circle closest-side, red, blue);
+    }
+
+    .gradient-radial-bis {
+        width: 300px;
+        height: 200px;
+        background: -webkit-radial-gradient(circle, red, yellow, blue, black);
+        background: -moz-radial-gradient(circle, red, yellow, blue, black);
+        background: -ms-radial-gradient(circle, red, yellow, blue, black);
+    }
+
+    div {
+        width: 200px;
+        height: 100px;
+    }
+
+    /* La fonction rgba() admet quatre paramètres :
+    rgba(red, green, blue, alpha) 
+    Où :
+    - red, green et blue sont les composantes rouge, vert et bleu de
+    la couleur. Ces trois informations peuvent prendre
+    256 valeurs, codées entre 0 et 255.
+    - alpha est le degré d'opacité de la couleur. Cette information
+    est un nombre décimal codé entre 0 (transparent) et
+    1 (opaque).
+    
+    */
+
+
+    /* .alpha00 {
+        background-color: rgba(0, 100, 100, 0);
+    }
+
+    .alpha20 {
+        background-color: rgba(0, 100, 100, .2);
+    }
+
+    .alpha50 {
+        background-color: rgba(0, 100, 100, .5);
+    }
+
+    .alpha80 {
+        background-color: rgba(0, 100, 100, .8);
+    } */
+
+    /* La fonction hsla() admet également quatre paramètres :
+    hsla(hue, sat, light, alpha) */
+    /* hue represente la teinte. */
+
+    /* -sat represente la teinte
+    -light represente la luminosite
+    -alpha est le degré d'opacité de la couleur. */
+
+    .alpha00 {
+        background-color: hsla(179, 94%, 20%, 0);
+    }
+
+    .alpha20 {
+        background-color: hsla(179, 94%, 20%, 0.2);
+    }
+
+    .alpha50 {
+        background-color: hsla(179, 94%, 20%, .5);
+    }
+
+    .alpha80 {
+        background-color: hsla(179, 94%, 20%, .8);
+    }
+
+</style>
+
+</html>

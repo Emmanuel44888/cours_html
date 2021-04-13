@@ -1,6 +1,21 @@
 /* le selecteur universel etoile s'adresse a tous les eléments*/
+
+@font-face {
+    font-family: police;
+    src: url('../../Fonts/Karantina-Regular.ttf');
+}
+
+body {
+    margin: 0;
+    font-family: 'police';
+    background: linear-gradient(to bottom right, blue, white);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
 *{
-    font-family: verdana;
+    font-family: 'police';
 }
 
 /* Creation d'une  classe CSS avec le selecteur . */

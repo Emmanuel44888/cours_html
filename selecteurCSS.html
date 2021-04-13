@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les sélecteurs CSS3</title>
+</head>
+
+<body>
+    <!-- Les sélecteurs 2.1 permettent par le biais d'une "requête CSS" d'atteindre 
+        un ensemble de noeud dans un document HTML et de lui donner un style. 
+    
+        - * -> tous les elements
+        - E -> tout element E
+        - E F -> tout élément F qui est un descendant de l'élément E
+        - E > F -> tout élément F, element enfant de l'élément E (Parent/Enfant)
+        - E :first-child -> un élément E aussi le premier enfant de son élément parent
+        - E:active, E:hover, E:focus -> Correspond à l'élément E au cours de certaines actions de l'utilisateur.
+        - E[foo="warning"] -> tout élément E dont l'attribut "foo" a exactement la valeur "warning".
+
+    -->
+
+    <div>
+        <p>Je suis le premier paragrahe</p>
+        <p>Je suis le deuxieme paragrahe</p>
+        <p>Je suis le troisieme paragrahe</p>
+    </div>
+    <hr>
+    <input type="text" placeholder="entrez un nom">
+    <hr>
+    <p class="exemple">Je n'ai pas d'attribut title</p>
+    <p class="exemple" title="comment">J'ai un attribut title comment</p>
+    <p class="exemple" title="evaluation">J'ai un attribut title evaluation</p>
+    <p class="exemple" title="essai">J'ai un attribut title essai</p>
+    <p class="exemple" title="esso">J'ai un attribut title esso</p>
+    <hr>
+    <div class="exemple">
+        <div>Je suis l'element div (element particulier)</div>
+        <p>je suis un p qui suit le div</p>
+        <p>je suis un p qui suit le div</p>
+        <span>je suis un span</span>
+        <p>je suis un p qui ne suit pas le div</p>
+    </div>
+    <hr>
+    <table class="exampleTable">
+		<tr>
+			<td>1ere ligne</td>
+		</tr>
+		<tr>
+			<td>2eme ligne</td>
+		</tr>
+		<tr>
+			<td>3eme ligne</td>
+		</tr>
+		<tr>
+			<td>4eme ligne</td>
+		</tr>
+		<tr>
+			<td>5ere ligne</td>
+		</tr>
+		<tr>
+			<td>6eme ligne</td>
+		</tr>
+		<tr>
+			<td>7eme ligne</td>
+		</tr>
+		<tr>
+			<td>8eme ligne</td>
+		</tr>
+	</table>
+    <hr>
+    <table class="exampleTable2">
+		<tr>
+			<td>1ere ligne</td>
+		</tr>
+		<tr>
+			<td>2eme ligne</td>
+		</tr>
+		<tr>
+			<td>3eme ligne</td>
+		</tr>
+		<tr>
+			<td>4eme ligne</td>
+		</tr>
+		<tr>
+			<td>5ere ligne</td>
+		</tr>
+		<tr>
+			<td>6eme ligne</td>
+		</tr>
+		<tr>
+			<td>7eme ligne</td>
+		</tr>
+		<tr>
+			<td>8eme ligne</td>
+		</tr>
+	</table>
+
+    <!-- /* Exercice  */ -->
+
+<div class="brass">Texte dans un div de classe brass</div>
+<div class="br56">Texte dans un div de classe b56</div>
+<div class="st45">Texte dans un div de classe st45</div>
+<div class="lo">Texte dans un div de classe lo</div>
+<ol>
+    <li>un</li>
+    <li>deux</li>
+    <li>trois</li>
+    <li>quatre</li>
+    <li>cinq</li>
+</ol>
+<form>
+    <input type="checkbox" checked><label>premier</label>
+    <input type="checkbox" checked><label>deuxième</label>
+    <input type="checkbox"><label>troisième</label>
+</form>
+
+
+<!-- /* Quelle syntaxe utiliser pour s'adresser :
+1) Aux éléments div dont l'attribut class commence par "br"
+2) Aux éléments div dont l'attribut class contient la lettre "t"
+3) L'avant-dernier élément li enfant de ol
+4) Le troisième enfant li de l'élément ol de classe "t"
+5) Les éléments checkbox qui sont cochés */ -->
+
+
+    <style>
+        div p:first-child {
+            font-weight: bold;
+        }
+
+        input[type="text"]:focus {
+            background: red;
+        }
+
+        p.exemple {
+            margin: 0;
+            padding: 10px;
+            color: black;
+        }
+
+        /* [attr^="stringValue"] 
+
+        - permet de sélectionner un élément DOM dont l'attribut "attr" commence exactement par la valeur "stringValue".
+        - Ici, permet d'appliquer du style à toutes les balises p dont la valeur de l'attribut title commence pas "ess"
+        */
+
+        p.exemple[title^="ess"] {
+            color: blue;
+            background: red;
+        }
+
+        /* [attr$="stringValue"] 
+
+        - permet de sélectionner un élément DOM dont l'attribut "attr" finit exactement par la valeur "stringValue".
+        - Ici, permet d'appliquer du style à toutes les balises p dont la valeur de l'attribut title finit pas "ent"
+        */
+
+        p.exemple[title$="ent"] {
+            color: red;
+            background: blue;
+        }
+
+        /* [attr*="stringValue"] 
+
+        - permet de sélectionner un élément DOM dont l'attribut "attr" comporte au moins une fois par la valeur "stringValue".
+        - Ici, permet d'appliquer du style à toutes les balises p dont la valeur de l'attribut title comporte "val"
+        */
+
+        p.exemple[title*="val"] {
+            color: yellow;
+            background: Green;
+        }
+
+        .exampleTable, .exampleTable2{
+            width: 100%;
+            border:1px solid #444;
+        }
+
+        /* :nth-child(expression)
+
+        Ce sélecteur permet de cibler tous les éléments en se basant sur leur position dans 
+        la liste des enfants de leur parent.
+
+        L'expression peut être un nombre, une expression numérique ou un mot clé tel que "odd" ou "even". */
+
+        /* tous les enfants aux numéros pairs */
+        .exampleTable tr:nth-child(even){
+            background: #999999;
+            text-shadow: 2px 2px 5px #111;
+            color: #fff;
+        }
+
+        /* tous les enfants aux numéros impairs */
+        .exampleTable tr:nth-child(odd){
+            background: #990000;
+            color: #fff;
+        }
+       
+        /* tous les 3 enfants */
+        .exampleTable tr:nth-child(3n){
+            background: #045FB4;
+            color: #fff;
+        }
+
+        /* le 7 eme enfant */
+        .exampleTable tr:nth-child(7){
+            background: #006400;
+            color: #fff;
+        }
+
+        /* :nth-last-child(expression)
+
+        Ce sélecteur accepte les mêmes arguments que :nth-child() et correspond au dernier 
+        enfant d'un élément parent.
+
+        C'est le même principe que le :nth-child() sauf que l'on part de la fin. */
+
+        /*tous les enfants aux numéros impairs depuis la fin.*/
+        .exampleTable2 tr:nth-last-child(odd){
+            background: #990000;
+            color: #fff;
+        }
+
+        /*les deux derniers enfants depuis la fin.*/
+        .exampleTable2 tr:nth-last-child(-n+2){
+            background: #045FB4;
+            color: #fff;
+        }
+
+        /* le 7 eme enfant en partant de la fin */
+        .exampleTable2 tr:nth-last-child(7){
+            background: #006400;
+            color: #fff;
+        }
+
+        /*Exercice */
+        /* 1er exercice */
+ /* 1) Aux éléments div dont l'attribut class commence par "br" */
+ div[class^="br"] {
+            color: red;
+        }
+
+        /* 2) Aux éléments div dont l'attribut class contient la lettre "t" */
+        div[class*="t"] {
+            color: green;
+        }
+
+        /* 3) L'avant-dernier élément li enfant de ol */
+        ol li:nth-last-child(2) {
+            color: red;
+        }
+
+        /* 4) Le troisième enfant li de l'élément ol de classe "t" */
+        ol[class="t"] li:nth-child(3) {
+            color: blue;
+        }
+
+        ol li:nth-child(3) {
+            color: blue;
+        }
+
+        /* 5) Les éléments checkbox qui sont cochés */
+        input[type=checkbox]:checked + label {
+            color: red;
+        }
+
+    </style>
+
+</body>
+
+</html>
