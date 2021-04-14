@@ -57,7 +57,68 @@ ol>li {
     background-color: yellow;
 }
 
+.conteneur {
+    display: flex;
+    justify-content: space-between;
+} 
 
+.enfant {
+    flex-basis: 200px;
+    background-color: red;
+}
+
+@media (max-width:800px) {
+    .conteneur{
+        display: flex;
+        flex-direction: column;justify-content: space-between;
+            }
+}
+
+/* Nouvel exercice sur les Grid box et responsive "media queries" */
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+.outer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.inner-grid {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.inner-grid img {
+    margin-top: 8px;
+    width: 100%;
+    padding: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    .inner-grid {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .inner-grid {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Fin exercice sur les Grid box et responsive "media queries" */
 
 
 
