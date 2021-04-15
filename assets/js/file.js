@@ -117,56 +117,46 @@ function myFunction() {
     document.getElementById("demo").innerHTML = x;
 }
 
-// Exos-Dom
+// cree un element de type p
+var par = document.createElement ("p");
 
-// Exercice N°1
+par.id = "intro";
+par.setAttribute("class", "blue");
+var text = document.createTextNode("JS paragraph");
+par.appendChild(text);
 
+//Ajouter l'element au DOM
+//
+var container = document.getElementById("container");
+container.appendChild(par);
 
-function changer_Style(){
-    var x = document.getElementById('parag1');
-    x.style.color = "white";
-    x.style.background = "black";
-    x.style.border = "dashed";
-    x.style.textIndent = "5px";
+// 1ere methode
+function direBonjour(){
+    var nom = document.getElementById("nom").value;
+    alert("Bonjour " + nom);
+}
+
+// 2eme methode
+
+// La méthode addEventListener() de EventTarget attache une 
+// fonction à appeler chaque fois que l'évènement spécifié 
+// est envoyé à la cible
+var cliquer = document.getElementById("cliquer");
+cliquer.addEventListener("click", function(){
+    var nom = document.getElementById("nom").value;
+    alert("Bonjour " + nom);
+})
+
+var nom = document.getElementById("nom");
+nom.addEventListener("keypress", function(event){
+    var charCode = event.key.charCodeAt(0);
+    if(charCode < 97 || charCode > 122){
+        event.preventDefault();
+        alert("Merci de tout ecrire en minuscule");
     }
+})
 
-// Exercice N°1 - Question 2
 
-        // Récupère l'élément HTML "id" et ajoute la nouvelle classe "active" 
-function changer_Style(){
-    var x = document.getElementById('parag1');
-    x.classList.add ('active');
 
-}
-
-// Exercice N°2
-
-function getAttributs() {
-    var x = document.getElementById("w3r");
-    var href = x.getAttribute('href');
-        alert (href);
-
-    var hreflang = x.getAttribute("hreflang");
-        alert (hreflang);
-
-    var rel = x.getAttribute("rel");
-        alert (rel); 
-
-    var target = x.getAttribute("target");
-        alert (target);
-
-    var type = x.getAttribute("type");
-        target(type);      
-}
-
-// Exercice N°3
-
-    // function getvalueform () {
-    //     var x = document.getElementById("form1");
-    //     for (var i = 0; i < x.lenght; i++) {
-    //         if form.classList ;
-    //     }
-    //     alert (x);
-    // }
 
 

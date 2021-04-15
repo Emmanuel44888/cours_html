@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice sur les selecteurs JQuery</title>
+    <link rel="stylesheet" href="assets/css/exos-JQuery.css">
+</head>
+<body>
+    
+    <p id ="contenu"></p>
+
+    La couleur <span class="verte"></span> est jolie, <span class="titre2">
+        surtout en titre2</span>, <a href="#">ou en lien href</a>
+        <span class="rouge">Le rouge </span> est pas mal aussi <span class="orange">mais le
+            le orange me plait bien</span>
+            surtout, <span class="titre2">en titre2
+            </span> vous êtes d'accord avec moi ?<span class="gras">On peut aussi écrire en gras
+            </span> et même en <span class="titre1">gros comme dans ce titre1</span>. L'écriture
+    <span class="souligne">en
+                souligné</span>, ou en
+            <span class="barre">barré</span> est aussi possible en html. <span class="souligne">Le
+    souligné
+            </span> <span class="bleu"> ou le bleu</span> <span class="gras"> et le gras</span>.
+            sont sympas, <span class="italique"> mais l'italique</span> est pratique,
+            <span class="barre"> tout comme le barré</span> surtout quand on colorie, <span
+    class="vert">
+                en vert</span> le texte. <span class="italique">L'italique</span> est très joli comme
+    style. <span>
+                Ici j'ai un span html sans rien</span> et là le même <span class="vert">de la classe
+    vert</span> ici
+            <a href="#">j'ai un lien a</a>, que j'aimerais bien transformer en bouton. <span
+    class="vert">Le vert</span>
+            peut aussi egayer les pages.
+            <span class="titre1">J'aimerais devenir un titre 1</span> moi. Et ce texte <span
+    class="vert">deviendra
+                vert</span> lorsqu'on cliquera sur le bon bouton <a href="#">de même que ce lien
+    deviendra un bouton</a> si
+            on clique au bon endroit <span class="bleu">quand à ce texte il deviendra bleu</span>.
+            Pourquoi ne pas, <span class="souligne">souligner</span> le fait que,
+            <span class="vert">le vert</span> est la couleur de la nature. Et que le <span
+    class="bleu">bleu
+                celui du ciel</span>. <span class="souligne">Je souligne le fait que
+                le lien qui suit</span> doit devenir un <a href="#">bouton.</a> Le vert aimerais
+    devenir très présent
+    <span class="vert">dans ce texte</span>, <span class="bleu">mais moins que le bleu
+    </span>. Allez, <span class="italique">faites que cela </span> <span class="rouge">
+fonctionne.</span>
+
+</p>
+<button onclick="semantique()">Faire apparaitre le gras, l'italique et le souligné au bons
+endroits</button> <br />
+<button onclick="colorer()">Colorer le texte</button> <br />
+<button onclick="mettreTitres()">Mettre des titres</button> <br />
+<button onclick="liensEnBoutons()">Transformer les liens en boutons</button> <br />
+<button onclick="dupliquerTexte()">Dupliquer le texte</button> <br />
+<button onclick="regrouperTitres()">Regrouper les titres</button> <br />
+<button onclick="regrouperLiens()">Regrouper les liens</button> <br />
+<button onclick="viderBoutons()">Vider les boutons, enlever le texte qu'ils
+contiennent</button> <br />
+<button onclick="enleverLiens()">Enlever les liens</button> <br />
+<button onclick="enleverGras()">Enlever le texte en gras</button> <br />
+<button onclick="enleverItalique()">Enlever le texte en italique</button> <br />
+<button onclick="enleverDecor()">Enlever le texte décoré</button> <br />
+<button onclick="voirCode()">Voir le code HTML</button><br />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <textarea>JQuery</textarea>
+    <textarea>JavaScript</textarea>
+
+    <p>JQuery</p>
+    <p>JavaScript</p>
+
+    <p>PHP</p>
+    <p>Java</p>
+    <p>Python</p>
+
+<button id="button1">Clic to check the effect</button>
+
+
+<script src="assets/js/jquery-3.6.0.js"></script>
+<script src="assets/js/exos-JQuery.js"></script>
+
+</body>
+</html>

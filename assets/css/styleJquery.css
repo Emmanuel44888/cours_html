@@ -11,17 +11,9 @@
 }
 
 .size{
-    color: green;
-}
-
-.back{
-color: hotpink;
+    font-size: 30px;
 }
 
 .weight{
-    color: black;
-}
-
-.weight {
     font-weight: bold;
 }

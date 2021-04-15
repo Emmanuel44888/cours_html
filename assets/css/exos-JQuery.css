@@ -1,0 +1,32 @@
+
+button {
+    display: block;
+    margin: 20px 0 0 0;
+}
+
+textarea {
+    width: 200px;
+    height: 60px;
+    margin: 10px;
+    float: left;
+    font-size: 18px;
+}
+
+p {
+    clear: left;
+    font-weight: bold;
+    font-size: 16px;
+    color: green;
+    margin: 8px;
+    padding: 2px;
+}
+
+.w3r_font_color {
+    color: rgb(253, 6, 18);
+}
+
+.w3r_background {
+    background: yellow;
+}
+
+

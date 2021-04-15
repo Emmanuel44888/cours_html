@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo DOMS</title>
+    <link rel="stylesheet" href="assets/css/styleExoDom.css">
+</head>
+
+<body onload="alert('bienvenue...');">
+    <p id="parag1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, iste ipsam, deserunt perferendis ab laborum
+        laboriosam quibusdam quia, repellendus voluptas molestias neque quisquam eum maiores dolore consequuntur totam
+        autem consectetur.
+    </p>
+    <button onclick="changerStyle()">ChangerStyle</button>
+    <hr>
+    <p><a id="w3r" type="text/html" hreflang="en‐us" rel="nofollow" target="_self"
+            href="https://www.w3resource.com/">w3resource</a></p>
+    <button onclick="getAttributes()">Click here to get attributes value</button>
+    <hr>
+    <form id="form1" onsubmit="getFormvalue()">
+        First name: <input type="text" name="fname" value="David"><br>
+        Last name: <input type="text" name="lname" value="Beckham"><br>
+        <input type="submit" value="Submit">
+    </form>
+    </br>
+
+    <!-- À un document HTML, ajouter des alertes :
+        ‐ Au chargement de la page (attribut onload)
+        ‐ Quand on passe sur une image (attribut onmouseover)
+        ‐ Quand on clique sur un bouton (attribut onclick)
+        Avec des boutons :
+        ‐ Changer la couleur de fond quand on clique sur un bouton
+        ‐ Changer aussi l'apparence du bouton
+        ‐ Ajouter un bouton qui permette de revenir à la normale.
+        Sur des images :
+        ‐ Changer une image par une autre quand la souris passe dessus (attribut onmouseover)
+        ‐ Remettre l'image d'origine quand la souris quitte l'image (attribut onmouseout) -->
+    <h1>Actions utilisateur et JavaScript</h1>
+    <p>
+        Bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+        bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+        bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+        bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    </p>
+    <div class="illustration">
+        <img src="assets/img/chat.jfif" alt="un chat" width="200" onmouseover="alert('ron ron...');" />
+    </div>
+    <button onclick="alert('clic !');">cliquez ici !</button>
+    <br />
+    <button id="bnuit" onclick="document.documentElement.style.backgroundColor='black';
+document.documentElement.style.color='white';
+document.getElementById('bnuit').style.color='red';">
+        nuit</button>
+    <button onclick="retournormal();">jour</button>
+    <br />
+    <div class="illustration">
+        <img id="ecran" src="assets/img/chat.jfif" alt="un chat" width="200"
+            onmouseover="document.getElementById('ecran').src='assets/img/chien.jpg'"
+            onmouseout="document.getElementById('ecran').setAttribute('src','assets/img/chat.jpg');" />
+    </div>
+    <script src="assets/js/dom.js"></script>
+</body>
+
+</html>

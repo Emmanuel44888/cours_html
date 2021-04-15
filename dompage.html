@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8" />
 	<title>My JS Page</title>
-    <link rel="stylesheet" href="assets/css/styleDom.css">
+	<link rel="stylesheet" href="assets/css/styleDom.css">
 </head>
+
 <body>
 	<div id=container>
-	Considerons les paragraphes suivants :
+		Considerons les paragraphes suivants :
 		<p class=blue name=parConteneur> bonjour </p>
 		<p class=red name=parConteneur> bonsoir, voici
-		<a href="#"> ma page </a>
+			<a href="#"> ma page </a>
 		</p>
-		<p class=blue name=parConteneur> salut </p>
+		<p class=blue name=parConteneur>salut</p>
+		</div>
+		</br>
+		</br>
+		<label for="nom">Saisir uniquement des caractères alphabétiques en minuscules</label>
+		<input type="text" id="nom">
+		<button onclick="direBonjour()">Cliquer1</button>
+		
+		<button id="cliquer">Cliquer2</button>
+
 	</div>
-	
 
-    <form action="" onsubmit="myFunction();return false">
-        First Name: <input type="text" id="myText" value="John">
-        <input type="submit" value="send">
-    </form>
+	<form action="" onsubmit="myFunction();return false">
+		First Name: <input type="text" id="myText" required>
+		<input type="submit" value="Send">
+	</form>
 
-    <p id="demo"></p>
+	<p id="demo"></p>
 
-<script src="assets/js/file.js"></script>
 
+
+
+
+	<script src="assets/js/file.js"></script>
 </body>
+
 </html>
